@@ -1,0 +1,77 @@
+{% extends 'base.html'%}
+
+{% block content %}
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Go Spatial</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Open source tool for visualizing spatial data.</h2>
+                        <a class="btn btn-primary" href="#login">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="login">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Login Credentials</h2>
+                        <form method="POST" action="login">
+                            {% csrf_token %}
+                            <div class="text_field">
+                                <input type="text" name="Username" placeholder="Username">
+                                <span></span>
+                                <label></label>
+                            </div>
+                            <br>
+                            <div class="text_field">
+                                <input type="password" name="Password" placeholder="Password">
+                                <span></span>
+                                <label></label>
+                            </div>
+                            <input type="checkbox" id="remember" name="remember" value="remember">
+                            <label> Remember Me</label><br>
+                            
+                            <input type="submit" value="login" class="submit">
+                        
+                        
+                            <!-- Register buttons -->
+                            <div class="text-center text-white mb-4">
+                                <p>Not a member? <a href="register">Register</a></p>
+                            
+                        </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects-->
+        
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    
+                </div>
+            </div>
+        </section>
+    
+{% endblock %}
